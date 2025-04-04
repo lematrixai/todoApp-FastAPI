@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 """ You can add a DATABASE_URL environment variable to your .env file """
 # DATABASE_URL = os.getenv("DATABASE_URL")
 
