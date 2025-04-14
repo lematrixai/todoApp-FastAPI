@@ -12,6 +12,9 @@ configure_logging(LogLevels.info)
 
 app = FastAPI()
 
+Base.metadata.create_all(bind=engine)
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], 
@@ -19,8 +22,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-Base.metadata.create_all(bind=engine)
-
 register_routes(app)
 
 
