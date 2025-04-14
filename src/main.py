@@ -11,10 +11,7 @@ configure_logging(LogLevels.info)
 
 app = FastAPI()
 
-""" Only uncomment below to create new tables, 
-otherwise the tests will fail if not connected
-"""
-# Base.metadata.create_all(bind=engine)
+Base.metadata.create_all(bind=engine)
 
 register_routes(app)
 
@@ -24,7 +21,7 @@ async def root():
     return """
     <html>
         <head>
-            <title>Welcome to Lematrixai Todo API</title>
+            <title>Lematrixai</title>
             <style>
                 body {
                     display: flex;
