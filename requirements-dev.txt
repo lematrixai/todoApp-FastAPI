@@ -4,3 +4,4 @@ pytest-asyncio
 httpx
 black
 ruff
+alembic
