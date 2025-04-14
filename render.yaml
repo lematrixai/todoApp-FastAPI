@@ -1,14 +1,14 @@
 services:
   - type: web
-    name: fastapi-app
-    env: docker
-    plan: free
-    dockerfilePath: ./Dockerfile
-    autoDeploy: true
-    envVars:
+    name: fastapi-app        
+    env: docker            
+    plan: free               
+    dockerfilePath: ./Dockerfile  
+    autoDeploy: true         
+    envVars:                 
       - key: ENV
-        value: production
+        value: production    
       - key: DATABASE_URL
-        sync: false  # Set in Render Dashboard
+        sync: false           
       - key: SECRET_KEY
-        sync: false  # Set in Render Dashboard
+        sync: false           
